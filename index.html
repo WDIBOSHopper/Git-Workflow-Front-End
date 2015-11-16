@@ -20,10 +20,10 @@
   <li>{{username}}</li>
   <li>{{email}}</li>
   <li>Address
-    <ul>{{#each  address}}
+    {{#each  address}}
+    <ul>
     <li>{{street}} {{suite}}</li>
     <li>{{city}} {{zipcode}}</li>
-    {{/each}}
     <li>
       <ul>
         {{#each geo}}
@@ -32,6 +32,7 @@
         {{/each}}
       </ul>
     </ul>
+    {{/each}}
   </li>
 
   <li>{{phone}}</li>
