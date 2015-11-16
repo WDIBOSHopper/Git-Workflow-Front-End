@@ -11,3 +11,42 @@
     </body>
     <script type="text/javascript"></script>
   </html>
+
+
+<script id="infoTemplate" type="text/x-handlebars-template">
+{{#each}}
+<h3>Person {{id}}</h3>
+<ul>
+  <li>{{username}}</li>
+  <li>{{email}}</li>
+  <li>Address
+    <ul>{{#each  address}}
+    <li>{{street}} {{suite}}</li>
+    <li>{{city}} {{zipcode}}</li>
+    {{/each}}
+    <li>
+      <ul>
+        {{#each geo}}
+        <li>Lat: {{lat}}</li>
+        <li>Long: {{lng}}
+        {{/each}}
+      </ul>
+    </ul>
+  </li>
+
+  <li>{{phone}}</li>
+
+  <li>{{website}}</li>
+  <li>company</li>
+    {{#each company}}
+      <ul>
+        <li>{{name}}</li>
+        <li>{{catchphrase}}</li>
+        <li>{{bs}}</li>
+      </ul>
+    {{/each}}
+</ul>
+
+{{/each}}
+
+</script>
